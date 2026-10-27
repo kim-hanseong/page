@@ -1,5 +1,12 @@
 import { SetStateAction, SVGProps } from "react";
 
+export type FetchBestSellerParams = {
+  bestSellerDB: string;
+  pagination: string;
+  pageSize: string;
+  sorting: string;
+};
+
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
@@ -7,33 +14,19 @@ export type ModalState = {
   isOpen: boolean;
   id?: string | number; // 특정 ID가 필요한 경우
 };
-export type ModalKey =
-  | "CommentModal"
-  | "LoginModal"
-  | "SearchModal"
-  | "MobileSearchModal";
-
 export type ModalStateType = {
   isOpen: boolean;
   type: string;
   id?: number;
 };
-export type ModalTest = {
+export type CommentType = {
   id: number;
-};
-
-export type ModalStateType2<T = number> = {
-  isOpen: boolean;
-  type: ""; // 🔹 "CommentModal" | "LoginModal" | "DeleteModal" 중 하나만 가능
-  id?: T;
-};
-export type LoadingStateType = {
-  isOpen: boolean;
-};
-
-type CommentType = {
+  email: string;
   slug: string;
   rating: number;
+  like: number;
+  date: string;
+  comment: string;
 };
 export type BookDataType = {
   delivery?: boolean;
@@ -48,8 +41,33 @@ export type BookDataType = {
   datetime: Date;
   created_at?: Date;
   numbering?: number;
-  isbn: number;
+  isbn: string;
   comments?: CommentType[];
+  content: string;
+  blurDataURL?: string;
+};
+export const emptyBook: BookDataType = {
+  id: 0,
+  title: "",
+  price: 0,
+  sale_price: 0,
+  authors: [],
+  thumbnail: "",
+  publisher: "",
+  contents: "",
+  datetime: new Date(0),
+  isbn: "",
+  content: "",
+  // 선택 필드들은 생략하거나 기본값 지정할 수 있음
+  delivery: false,
+  created_at: new Date(0),
+  numbering: 0,
+  comments: [],
+  blurDataURL: "",
+};
+export type LikeDataType = {
+  id?: number;
+  isbn: string;
 };
 
 export type BooksData = {
@@ -81,3 +99,13 @@ export type AddressType = {
   email: string;
   is_recent: boolean;
 };
+export interface BestSellerParams {
+  category: string;
+  bestSellerDB: string;
+  pagination: string;
+  pageSize: string;
+  sorting: string;
+  data: BookDataType[];
+}
+
+export type ViewType = "Col" | "Basis";

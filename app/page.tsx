@@ -1,12 +1,9 @@
-"use client";
+// import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import Main from "@/components/main";
+import { cookies } from "next/headers";
 
-import MainPage from "@/components/main";
-import Layout from "@/components/layout/LayOut";
+export const revalidate = 3600; // 1시간마다 재검증
 
-export default function Index() {
-  return (
-    <Layout>
-      <MainPage />
-    </Layout>
-  );
+export default async function Page() {
+  return <Main />;
 }
