@@ -521,7 +521,7 @@ export default function App() {
               {/* Link Cards */}
               <div className="mt-8 space-y-4">
                 <a
-                  href="https://book-uk3v.vercel.app/order"
+                  href="https://book-uk3v.vercel.app"
                   target="_blank"
                   rel="noreferrer"
                   className="group p-6 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-sky-500/50 transition-all flex items-center justify-between block"
