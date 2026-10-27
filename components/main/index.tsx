@@ -521,7 +521,7 @@ export default function App() {
               {/* Link Cards */}
               <div className="mt-8 space-y-4">
                 <a
-                  href="여기에_실제_서비스_링크를_넣으세요"
+                  href="https://book-uk3v.vercel.app/order"
                   target="_blank"
                   rel="noreferrer"
                   className="group p-6 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-sky-500/50 transition-all flex items-center justify-between block"
@@ -543,7 +543,7 @@ export default function App() {
                 </a>
 
                 <a
-                  href="여기에_깃헙_저장소_링크를_넣으세요"
+                  href="https://github.com/kim-hanseong/Book"
                   target="_blank"
                   rel="noreferrer"
                   className="group p-6 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-600 transition-all flex items-center justify-between block"
@@ -565,7 +565,7 @@ export default function App() {
                   </span>
                 </a>
                 <a
-                  href="여기에_깃헙_저장소_링크를_넣으세요"
+                  href="https://github.com/kim-hanseong/code-test"
                   target="_blank"
                   rel="noreferrer"
                   className="group p-6 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-600 transition-all flex items-center justify-between block"
